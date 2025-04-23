@@ -25,7 +25,7 @@ if uploaded_file is not None:
 
     # Prétraitement de l'image
     size = (224, 224)  # Adapter à la taille d'entrée du modèle
-    image = ImageOps.fit(image, size, Image.ANTIALIAS)
+    image = ImageOps.fit(image, size, Image.Resampling.LANCZOS)
     img_array = np.asarray(image)
     img_array = img_array.astype(np.float32) / 255.0  # Normalisation
     img_array = np.expand_dims(img_array, axis=0)  # Ajout de la dimension batch
