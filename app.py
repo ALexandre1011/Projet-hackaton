@@ -6,6 +6,8 @@ import numpy as np
 # Titre de l'application
 st.title("🧬 Détection de catégories de sperme")
 st.markdown("Cette application permet de classifier une image de sperme comme **non sperme** , **normal** ou **anormal** à l'aide d'un modèle de deep learning.")
+st.markdown("Il est à noter que nous traitons que les images au format **bmp** .")
+
 
 # Chargement du modèle
 @st.cache_resource
@@ -16,7 +18,7 @@ def load_model():
 model = load_model()
 
 # Téléversement de l'image
-uploaded_file = st.file_uploader("Téléversez une image microscopique au format JPG ou PNG", type=["jpg", "jpeg", "png","bmp"])
+uploaded_file = st.file_uploader("Téléversez une image microscopique au format JPG ou PNG", type=["bmp"])
 
 if uploaded_file is not None:
     # Affichage de l'image
