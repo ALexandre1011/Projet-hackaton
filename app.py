@@ -5,7 +5,7 @@ import numpy as np
 
 # Titre de l'application
 st.title("🧬 Détection de catégories de sperme")
-st.markdown("Cette application permet de classifier une image de sperme comme **normal** ou **anormal** à l'aide d'un modèle de deep learning.")
+st.markdown("Cette application permet de classifier une image de sperme comme **non sperme** , **normal** ou **anormal** à l'aide d'un modèle de deep learning.")
 
 # Chargement du modèle
 @st.cache_resource
